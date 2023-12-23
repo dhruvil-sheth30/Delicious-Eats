@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Eats | Flavorful Recipes</title>
+    <link rel="logo" href="/assets/logo.png">
+    <link rel="shortcut icon" href="./public/icon.img" type="image/img+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./#" class="logo">
+            <img src="./assets/logo.png" alt="Delicious Eats Logo">
+        </a>
+        <h1>Delicious Eats</h1>
+        <a href="./#search" class="nav-btn nav-btn-search">
+            <img src="./assets/search.png" alt="Search Icon">
+        </a>
+        <a href="./#discover-meal" class="nav-btn nav-btn-random">
+            <span>Discover Recipes</span>
+        </a>
+    </nav>
+    <header>
+        <div class="hero-desc">
+            <div class="hero-content">
+                <div class="hero-greeting">Savor the Flavor!</div>
+                <div class="hero-text">
+                    Dive into a culinary journey with our delightful recipes.
+                </div>
+            </div>
+            <div class="hero-action">
+                <a href="./#discover-meal" class="hero-btn hero-btn-discover">
+                    <img src="/assets/discover.png" height="30px" width="30px" alt="Discover Icon">
+                    <span>Explore Now</span>
+                </a>
+                <a href="./#search" class="hero-btn hero-btn-search">
+                    <img src="/assets/search.png" height="30px" width="30px" alt="Search Icon">
+                    <span>Search Recipes</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-video">
+            <img src="https://media1.giphy.com/media/8FrhC5Kee9B7LjNh03/200.webp?cid=ecf05e47608h1jd0wuh91q2p7k7sa96dgaq1zsmbat1rltel&ep=v1_gifs_search&rid=200.webp&ct=g"
+                alt="Delicious Food Video" autoplay loop muted>
+            <a class="hero-video-source"
+                href="https://giphy.com/clips/anidom-fox-foxtv-animation-domination-8rzL2xpBbgGD9ymfrr" target="_blank"
+                rel="noopener noreferrer">From Giphy</a>
+        </div>
+    </header>
+
+    <div class="meal" id="discover-meal">
+        <div class="meal-header">
+            <span>Whip Up Something Special</span>
+            <h1>Featured Recipe</h1>
+        </div>
+
+        <div class="hidden" id="loader">
+            <div id="loader-circle"></div>
+        </div>
+
+        <div class="random-meal" id="random-meal">
+            <img src="" alt="Random Meal Image" class="random-meal-img" id="random-meal-img">
+            <div class="random-meal-label">Recipe Name:</div>
+            <div class="random-meal-name" id="random-meal-name"></div>
+        </div>
+
+        <a href="./#discover-meal" class="hero-btn btn-random-meal" id="get-new-meal">
+            <img src="/assets/9055527_bxs_food_menu_icon.png" height="24" width="24" alt="Refresh Icon">
+            Discover More
+        </a>
+
+        <div class="modal-container">
+            <div class="modal-close"></div>
+            <div class="modal" id="modal">
+                <div class="modal-close-btn">Close</div>
+                <div class="modal-content">
+                    <img src="" alt="Modal Meal Image" class="modal-img" id="modal-meal-img">
+                    <div class="modal-desc">
+                        <div class="modal-label-name">Recipe Name:</div>
+                        <div class="modal-name" id="modal-meal-name"></div>
+                        <div class="modal-label-ingredients">Ingredients:</div>
+                        <div class="modal-ingredients" id="modal-meal-ingredients"></div>
+                        <div class="modal-label-instructions">Instructions:</div>
+                        <div class="modal-instructions" id="modal-meal-instructions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search" id="search">
+        <h1>Search for a Culinary Delight</h1>
+        <form action="" class="search-form" id="search-form">
+            <input type="search" name="search" id="search-input" placeholder="Discover your favorite recipe..">
+            <input type="submit" value="Search" class="search-submit hero-btn">
+        </form>
+    </div>
+
+    <div class="search-results hidden">
+        <h2>Search results for <span class="search-query"></span></h2>
+        <div class="results" id="results">
+            <!-- Search results go here -->
+        </div>
+    </div>
+
+    <div class="ribbon">
+        <div class="data">
+            <img class="data-img" src="https://media1.giphy.com/media/Q1wnq0OopONLgQwt8h/giphy.gif?cid=ecf05e47lgltatq9t8hfgtasqcmv77oi3hcej9iae3ttawcc&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Meals GIF">
+            <span class="data-desc">Total Recipes: <span class="data-count">302</span>
+            </span>
+        </div>
+        <div class="data">
+            <img class="data-img" src="https://media4.giphy.com/media/9FZJr6bO0UWt4CwlBD/200w.webp?cid=ecf05e47ouemdnzakzpleb5sj163sop1rfkxv4lil4saghmg&ep=v1_gifs_search&rid=200w.webp&ct=g" alt="Ingredients GIF">
+            <span class="data-desc">Total Ingredients: <span class="data-count">575</span>
+            </span>
+        </div>
+        <div class="data">
+            <img class="data-img" src="https://media4.giphy.com/media/jcY5IX1ozLIgiUfc34/giphy.gif?cid=ecf05e476wdpvmd65ao5plxb538wp1nf4fe2x172l2op4ywj&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="Images GIF">
+            <span class="data-desc">Images: <span class="data-count">302</span>
+            </span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
